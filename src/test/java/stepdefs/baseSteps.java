@@ -19,10 +19,10 @@ public class baseSteps {
         Browser.getBrowser().get("https://myanimelist.net/");
         Browser.getBrowser().manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(Browser.getBrowser(), Duration.ofSeconds(10));
-        // Čekamo da se pojavi cookie popup
+        // Waiting for pop-up to appear so we can click on it and continue.
         WebElement cookieButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='accept-btn']")));
         cookieButton.click();
-        System.out.println("✅ Kliknuto na 'Agree' za cookie popup.");
+        System.out.println("✅ We clicked on 'Agree' for cookie popup.");
     }
 
     @After
