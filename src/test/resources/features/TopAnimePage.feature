@@ -14,3 +14,19 @@ Feature: Top Anime
     And   we click on Top Anime
     And   we click on Top Airing
     Then  Top Airing anime list will be in view
+
+  @ListOfFirst50TopAllAnime
+  Scenario: Test 03: Make the list of first 50 Top All Anime
+    Given home page is opened and we hover over Anime node
+    And   we click on Top Anime
+    When  list of fifty first Anime titles is listed
+    Then  print the list of fifty Top Anime
+
+
+  @ListOfFirst50TopAiringAnime
+  Scenario: Test 04: Make the list of first 50 Top Airing Anime
+    Given home page is opened and we hover over Anime node
+    And   we click on Top Anime
+    And   we click on Top Airing
+    When  list of fifty first Anime titles is listed
+    Then  print the list of fifty Top Airing Anime
