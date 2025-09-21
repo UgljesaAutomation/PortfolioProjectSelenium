@@ -49,12 +49,12 @@ public class LogInPage {
 
     @And("username is entered")
     public void usernameIsEntered() {
-        myAnimeList.loginPage().getUserName().sendKeys("Cabu4");
+        myAnimeList.loginPage().getUserName().sendKeys("UgiAutoSel");
     }
 
     @And("password is entered")
     public void passwordIsEntered() {
-        myAnimeList.loginPage().getPassword().sendKeys("Cabulani3306!");
+        myAnimeList.loginPage().getPassword().sendKeys("TestAutomationSelenium");
     }
 
     @And("login button is clicked")
