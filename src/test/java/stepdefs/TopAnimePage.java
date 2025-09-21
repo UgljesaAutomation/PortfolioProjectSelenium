@@ -48,7 +48,7 @@ public class TopAnimePage {
     }
 
     // Test 002: Top Airing Anime
-    //  homePageIsOpenedAndWeHoverOverAnim
+    //  homePageIsOpenedAndWeHoverOverAnime
     //  weClickOnTopAnime
     @And("we click on Top Airing")
     public void weClickOnTopAiring() {
@@ -62,7 +62,7 @@ public class TopAnimePage {
     }
 
     //Test 03: Make the list of first 50 Anime
-    //  homePageIsOpenedAndWeHoverOverAnim
+    //  homePageIsOpenedAndWeHoverOverAnime
     //  weClickOnTopAnime
     @When("list of fifty first Anime titles is listed")
     public void listOfFirstAnimeTitlesIsListed() {
@@ -82,7 +82,7 @@ public class TopAnimePage {
     }
 
     //Test 04: Make the list of first 50 Top Airing Anime
-    //  homePageIsOpenedAndWeHoverOverAnim
+    //  homePageIsOpenedAndWeHoverOverAnime
     //  weClickOnTopAnime
     //  weClickOnTopAiring
     //  listOfFirstAnimeTitlesIsListed
@@ -93,5 +93,22 @@ public class TopAnimePage {
             System.out.println((i+1) + ". " + animeList.get(i));
         }
         System.out.println("✅ Test Pass. First 50 Top Airing list is printed.");
+    }
+
+    //Test 05: Make the list of first 50 Most Popular Anime
+    //  homePageIsOpenedAndWeHoverOverAnime
+    //  weClickOnTopAnime
+    @And("we click on Most Popular")
+    public void weClickOnMostPopular() {
+        Browser.getBrowser().findElement(By.xpath("//a[@href='?type=bypopularity']")).click();
+    }
+    //  listOfFirstAnimeTitlesIsListed
+    @Then("print the list of fifty Most Popular Anime")
+    public void printTheListOfFiftyMostPopularAnime() {
+        System.out.println("Top 50 Anime:");
+        for (int i = 0; i < animeList.size(); i++) {
+            System.out.println((i+1) + ". " + animeList.get(i));
+        }
+        System.out.println("✅ Test Pass. First 50 Top Most popular list is printed.");
     }
 }

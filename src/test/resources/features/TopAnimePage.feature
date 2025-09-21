@@ -30,3 +30,11 @@ Feature: Top Anime
     And   we click on Top Airing
     When  list of fifty first Anime titles is listed
     Then  print the list of fifty Top Airing Anime
+
+  @ListOfFirst50MostPopularAnime
+  Scenario: Test 05: Make the list of first 50 Most Popular Anime
+    Given home page is opened and we hover over Anime node
+    And   we click on Top Anime
+    And   we click on Most Popular
+    When  list of fifty first Anime titles is listed
+    Then  print the list of fifty Most Popular Anime

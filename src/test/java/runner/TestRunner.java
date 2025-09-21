@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = {"stepdefs"}
-        //tags = "@ListOfFirst50TopAiringAnime"
+        glue = {"stepdefs"},
+        tags = "@ListOfFirst50MostPopularAnime"
 )
 public class TestRunner {
 }
